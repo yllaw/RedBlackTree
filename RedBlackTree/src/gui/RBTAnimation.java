@@ -98,49 +98,49 @@ public class RBTAnimation<K extends Comparable<K>, V> extends Application {
 			for (Object node : preorderList) {
 				builder.append(node + ", ");
 			}
-			dialog.setContentText(builder.toString());
+			dialog.setContentText(builder.toString().substring(0, builder.length() - 2));
 			dialog.showAndWait();
 		});
 
 		btInorder.setOnAction(e -> {
-			List<Object> preorderList = tree.inorder();
+			List<Object> inorderList = tree.inorder();
 			Alert dialog = new Alert(AlertType.INFORMATION);
-			dialog.setTitle("Preorder List");
-			dialog.setHeaderText("Preorder traversal");
+			dialog.setTitle("Inorder List");
+			dialog.setHeaderText("Inorder traversal");
 
 			StringBuilder builder = new StringBuilder();
-			for (Object node : preorderList) {
+			for (Object node : inorderList) {
 				builder.append(node + ", ");
 			}
-			dialog.setContentText(builder.toString());
+			dialog.setContentText(builder.toString().substring(0, builder.length() - 2));
 			dialog.showAndWait();
 		});
 
 		btPostorder.setOnAction(e -> {
-			List<Object> preorderList = tree.postorder();
+			List<Object> postorderList = tree.postorder();
 			Alert dialog = new Alert(AlertType.INFORMATION);
-			dialog.setTitle("Preorder List");
-			dialog.setHeaderText("Preorder traversal");
+			dialog.setTitle("Postorder List");
+			dialog.setHeaderText("Postorder traversal");
 
 			StringBuilder builder = new StringBuilder();
-			for (Object node : preorderList) {
+			for (Object node : postorderList) {
 				builder.append(node + ", ");
 			}
-			dialog.setContentText(builder.toString());
+			dialog.setContentText(builder.toString().substring(0, builder.length() - 2));
 			dialog.showAndWait();
 		});
 
 		btBreadthFirst.setOnAction(e -> {
-			List<Object> preorderList = tree.breadthFirst();
+			List<Object> breadthFirstList = tree.breadthFirst();
 			Alert dialog = new Alert(AlertType.INFORMATION);
-			dialog.setTitle("Preorder List");
-			dialog.setHeaderText("Preorder traversal");
+			dialog.setTitle("Breadth-First List");
+			dialog.setHeaderText("Breadth-First traversal");
 
 			StringBuilder builder = new StringBuilder();
-			for (Object node : preorderList) {
+			for (Object node : breadthFirstList) {
 				builder.append(node + ", ");
 			}
-			dialog.setContentText(builder.toString());
+			dialog.setContentText(builder.toString().substring(0, builder.length() - 2));
 			dialog.showAndWait();
 		});
 

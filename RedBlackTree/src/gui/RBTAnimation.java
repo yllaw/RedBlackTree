@@ -89,7 +89,11 @@ public class RBTAnimation<K extends Comparable<K>, V> extends Application {
 		});
 
 		btPreorder.setOnAction(e -> {
+			if (tree.size == 0) {
+				return;
+			}
 			List<Object> preorderList = tree.preorder();
+			
 			Alert dialog = new Alert(AlertType.INFORMATION);
 			dialog.setTitle("Preorder List");
 			dialog.setHeaderText("Preorder traversal");
@@ -103,6 +107,9 @@ public class RBTAnimation<K extends Comparable<K>, V> extends Application {
 		});
 
 		btInorder.setOnAction(e -> {
+			if (tree.size == 0) {
+				return;
+			}
 			List<Object> inorderList = tree.inorder();
 			Alert dialog = new Alert(AlertType.INFORMATION);
 			dialog.setTitle("Inorder List");
@@ -117,6 +124,9 @@ public class RBTAnimation<K extends Comparable<K>, V> extends Application {
 		});
 
 		btPostorder.setOnAction(e -> {
+			if (tree.size == 0) {
+				return;
+			}
 			List<Object> postorderList = tree.postorder();
 			Alert dialog = new Alert(AlertType.INFORMATION);
 			dialog.setTitle("Postorder List");
@@ -131,6 +141,9 @@ public class RBTAnimation<K extends Comparable<K>, V> extends Application {
 		});
 
 		btBreadthFirst.setOnAction(e -> {
+			if (tree.size == 0) {
+				return;
+			}
 			List<Object> breadthFirstList = tree.breadthFirst();
 			Alert dialog = new Alert(AlertType.INFORMATION);
 			dialog.setTitle("Breadth-First List");

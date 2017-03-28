@@ -12,7 +12,7 @@ public class RBTree<K extends Comparable<K>, V> {
 
 	protected final Node<K, V> nil_Leaf = new Node<>(null, null, 'B');
 
-	protected int size = 0;
+	public int size = 0;
 
 	public RBTree() {
 

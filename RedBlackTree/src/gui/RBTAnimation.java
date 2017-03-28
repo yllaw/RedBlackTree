@@ -105,7 +105,7 @@ public class RBTAnimation<K extends Comparable<K>, V> extends Application {
 		btInorder.setOnAction(e -> {
 			List<Object> preorderList = tree.inorder();
 			Alert dialog = new Alert(AlertType.INFORMATION);
-			dialog.setTitle("Preorder List");
+			dialog.setTitle("Inorder List");
 			dialog.setHeaderText("Preorder traversal");
 
 			StringBuilder builder = new StringBuilder();
@@ -119,7 +119,7 @@ public class RBTAnimation<K extends Comparable<K>, V> extends Application {
 		btPostorder.setOnAction(e -> {
 			List<Object> preorderList = tree.postorder();
 			Alert dialog = new Alert(AlertType.INFORMATION);
-			dialog.setTitle("Preorder List");
+			dialog.setTitle("Postorder List");
 			dialog.setHeaderText("Preorder traversal");
 
 			StringBuilder builder = new StringBuilder();
@@ -133,7 +133,7 @@ public class RBTAnimation<K extends Comparable<K>, V> extends Application {
 		btBreadthFirst.setOnAction(e -> {
 			List<Object> preorderList = tree.breadthFirst();
 			Alert dialog = new Alert(AlertType.INFORMATION);
-			dialog.setTitle("Preorder List");
+			dialog.setTitle("Breadth-First List");
 			dialog.setHeaderText("Preorder traversal");
 
 			StringBuilder builder = new StringBuilder();

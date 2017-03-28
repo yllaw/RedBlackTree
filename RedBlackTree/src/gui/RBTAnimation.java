@@ -98,7 +98,7 @@ public class RBTAnimation<K extends Comparable<K>, V> extends Application {
 			for (Object node : preorderList) {
 				builder.append(node + ", ");
 			}
-			dialog.setContentText(builder.toString().substring(0, builder.length() - 2));
+			dialog.setContentText(builder.toString());
 			dialog.showAndWait();
 		});
 

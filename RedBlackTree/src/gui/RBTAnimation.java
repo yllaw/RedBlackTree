@@ -103,13 +103,13 @@ public class RBTAnimation<K extends Comparable<K>, V> extends Application {
 		});
 
 		btInorder.setOnAction(e -> {
-			List<Object> preorderList = tree.inorder();
+			List<Object> inorderList = tree.inorder();
 			Alert dialog = new Alert(AlertType.INFORMATION);
 			dialog.setTitle("Inorder List");
-			dialog.setHeaderText("Preorder traversal");
+			dialog.setHeaderText("Inirder traversal");
 
 			StringBuilder builder = new StringBuilder();
-			for (Object node : preorderList) {
+			for (Object node : inorderList) {
 				builder.append(node + ", ");
 			}
 			dialog.setContentText(builder.toString().substring(0, builder.length() - 2));
@@ -117,13 +117,13 @@ public class RBTAnimation<K extends Comparable<K>, V> extends Application {
 		});
 
 		btPostorder.setOnAction(e -> {
-			List<Object> preorderList = tree.postorder();
+			List<Object> postorderList = tree.postorder();
 			Alert dialog = new Alert(AlertType.INFORMATION);
 			dialog.setTitle("Postorder List");
-			dialog.setHeaderText("Preorder traversal");
+			dialog.setHeaderText("Postorder traversal");
 
 			StringBuilder builder = new StringBuilder();
-			for (Object node : preorderList) {
+			for (Object node : postorderList) {
 				builder.append(node + ", ");
 			}
 			dialog.setContentText(builder.toString().substring(0, builder.length() - 2));
@@ -131,13 +131,13 @@ public class RBTAnimation<K extends Comparable<K>, V> extends Application {
 		});
 
 		btBreadthFirst.setOnAction(e -> {
-			List<Object> preorderList = tree.breadthFirst();
+			List<Object> breadthFirstList = tree.breadthFirst();
 			Alert dialog = new Alert(AlertType.INFORMATION);
 			dialog.setTitle("Breadth-First List");
-			dialog.setHeaderText("Preorder traversal");
+			dialog.setHeaderText("Breadth-First traversal");
 
 			StringBuilder builder = new StringBuilder();
-			for (Object node : preorderList) {
+			for (Object node : breadthFirstList) {
 				builder.append(node + ", ");
 			}
 			dialog.setContentText(builder.toString().substring(0, builder.length() - 2));
